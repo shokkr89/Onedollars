@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDollar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url('https://github.com/shokkr89/Onedollars/blob/main/IMG_0254.jpeg?raw=true');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .copy-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>OneDollar - Only One Dollar Needed!</div>
+    </header>
+
+    <div class="content">
+        <h2>Welcome to OneDollar</h2>
+        <p>Here you can find your contract code that can be copied. Remember, all you need is one dollar to build this!</p>
+
+        <div class="copy-box" id="contractCode">
+            // Add your contract code here
+            0x1234567890abcdef1234567890abcdef12345678
+        </div>
+
+        <button class="copy-button" onclick="copyContractCode()">Copy Contract Code</button>
+
+        <p style="margin-top: 20px;">Ready to build on the Solana network? Visit our platform!</p>
+        <footer>
+            <p>Links: <a href="https://pump.fun" target="_blank">Pump.fun</a> | <a href="https://www.coingecko.com/en/coins/solana" target="_blank">Solana Coin</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function copyContractCode() {
+            var copyText = document.getElementById("contractCode");
+            var range = document.createRange();
+            range.selectNode(copyText);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("Contract code copied!");
+        }
+    </script>
+</body>
+</html>
