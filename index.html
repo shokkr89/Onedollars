@@ -6,12 +6,13 @@
     <title>OneDollar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            background-color: #f4f4f9;
         }
 
         header {
@@ -19,52 +20,97 @@
             background-size: cover;
             background-position: center;
             height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border-bottom: 5px solid #f39c12;
             color: white;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            padding-top: 80px;
+        }
+
+        .header-text {
+            font-size: 2.5rem;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 10px;
         }
 
         .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 40px 20px;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .one-dollar-text {
+            color: #f39c12;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
 
         .copy-box {
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 5px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
             font-family: monospace;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            color: #333;
+            overflow-wrap: break-word;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
         }
 
         .copy-button {
-            background-color: #4CAF50;
+            background-color: #28a745;
             color: white;
             border: none;
-            padding: 10px 15px;
-            margin-top: 10px;
+            padding: 15px 25px;
+            margin-top: 20px;
             cursor: pointer;
-            font-size: 1rem;
-            border-radius: 5px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
 
         .copy-button:hover {
-            background-color: #45a049;
+            background-color: #218838;
+        }
+
+        .dollar-message {
+            color: #28a745;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 25px;
         }
 
         footer {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
+            margin-top: 40px;
+            padding: 25px 15px;
+            background-color: #0d3b4b;
             color: white;
             font-size: 1rem;
         }
@@ -72,30 +118,55 @@
         footer a {
             color: #f9f9f9;
             text-decoration: none;
+            font-weight: 500;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
+
+        .how-it-works {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .how-it-works span {
+            font-weight: 700;
+            color: #f39c12;
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <div>OneDollar - Only One Dollar Needed!</div>
+        <div class="header-text">
+            OneDollar – Building Wealth with Just One Dollar
+        </div>
     </header>
 
     <div class="content">
-        <h2>Welcome to OneDollar</h2>
-        <p>Here you can find your contract code that can be copied. Remember, all you need is one dollar to build this!</p>
+        <h2>Start Your Journey with One Dollar</h2>
+        <p>It’s incredible what just one dollar can do. Imagine the potential of starting with something so small and watching it grow. Every journey begins with the smallest step, and with OneDollar, that step is only a dollar.</p>
+
+        <div class="one-dollar-text">
+            ONE DOLLAR IS YOUR KEY TO SUCCESS
+        </div>
+
+        <p class="how-it-works">
+            <span>Hold</span> your dollar. Let <span>OneDollar</span> work for you. We’ve simplified the process so that anyone can begin, no matter their experience. Just a dollar, and the journey begins!
+        </p>
 
         <div class="copy-box" id="contractCode">
-            // Add your contract code here
+            // Paste your contract code here
             0x1234567890abcdef1234567890abcdef12345678
         </div>
 
         <button class="copy-button" onclick="copyContractCode()">Copy Contract Code</button>
 
-        <p style="margin-top: 20px;">Ready to build on the Solana network? Visit our platform!</p>
+        <p class="dollar-message">Join us now! OneDollar is the opportunity you've been waiting for. The journey is only a dollar away!</p>
+
         <footer>
             <p>Links: <a href="https://pump.fun" target="_blank">Pump.fun</a> | <a href="https://www.coingecko.com/en/coins/solana" target="_blank">Solana Coin</a></p>
         </footer>
