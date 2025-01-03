@@ -134,21 +134,22 @@
             background-color: #0d3b4b;
             color: white;
             font-size: 1rem;
+            border-top: 3px solid #f39c12;
         }
 
         footer a {
-            color: #f9f9f9;
+            color: #fff;
             text-decoration: none;
             font-weight: 500;
-            padding: 5px 10px;
+            padding: 10px 20px;
             background-color: #f39c12;
-            border-radius: 5px;
-            margin: 0 5px;
+            border-radius: 8px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
         }
 
         footer a:hover {
             background-color: #e67e22;
-            text-decoration: underline;
         }
 
         .how-it-works {
@@ -172,7 +173,27 @@
         </div>
     </header>
 
+    <!-- Contract Code & Links placed at the Top -->
     <div class="content">
+        <div class="copy-box" id="contractCode">
+            0x1234567890abcdef1234567890abcdef12345678
+        </div>
+
+        <button class="copy-button" onclick="copyContractCode()">Copy Contract Code</button>
+
+        <div class="dollar-message">
+            Join us now! OneDollar is the opportunity you've been waiting for. The journey is only a dollar away!
+        </div>
+
+        <!-- Links section above main content -->
+        <footer>
+            <p>Links: 
+                <a href="https://pump.fun" target="_blank">Pump.fun</a> | 
+                <a href="https://shokkr89.github.io/Onedollars/" target="_blank">OneDollar Website</a> | 
+                <a href="https://t.me/onedollarone1" target="_blank">Telegram</a>
+            </p>
+        </footer>
+
         <h2>Start Your Journey with One Dollar</h2>
         <p>It’s incredible what just one dollar can do. Imagine the potential of starting with something so small and watching it grow. Every journey begins with the smallest step, and with OneDollar, that step is only a dollar.</p>
 
@@ -183,18 +204,6 @@
         <p class="how-it-works">
             <span>Hold</span> your dollar. Let <span>OneDollar</span> work for you. We’ve simplified the process so that anyone can begin, no matter their experience. Just a dollar, and the journey begins!
         </p>
-
-        <div class="copy-box" id="contractCode">
-            0x1234567890abcdef1234567890abcdef12345678
-        </div>
-
-        <button class="copy-button" onclick="copyContractCode()">Copy Contract Code</button>
-
-        <p class="dollar-message">Join us now! OneDollar is the opportunity you've been waiting for. The journey is only a dollar away!</p>
-
-        <footer>
-            <p>Links: <a href="https://shokkr89.github.io/Onedollars/" target="_blank">OneDollar Website</a> | <a href="https://t.me/onedollarone1" target="_blank">Telegram</a></p>
-        </footer>
     </div>
 
     <script>
